@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>^title^</title>
+<link rel="stylesheet" href="tpl/css/pure-min.css">
+<link rel="stylesheet" href="tpl/css/custom.css">
+<!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+<![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script src="assets/Chart.min.js"></script>
+
+</head>
+<body>
+
+<div class="pure-g">
+    <div class="pure-u-1-4">
+	^left^
+	</div>
+
+    <div class="pure-u-1-2">
+	^center^
+	<p>Владелец - ^fio^</p>
+	
+<form class="pure-form" action="/addpet.php" method="post">
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-2-3" placeholder="Кличка" name="petname">
+        <select class="pure-input-2-3" name="kind">
+            <option value="0">Кошки</option>
+            <option value="1">Собаки</option>
+			<option value="2">Кролики</option>
+        </select>
+        <select class="pure-input-2-3" name="sex">
+            <option value="0">М</option>
+            <option value="1">Ж</option>
+        </select>
+		
+		<p><label for="birthday">Дата рождения</label></p>
+		<input type="date" class="pure-input-2-3" placeholder="Дата рождения" name="birthday">
+		<p><label for="birthday">Стерилизация</label></p>
+        <select class="pure-input-2-3" name="sterilized">
+            <option value="0">Нет</option>
+            <option value="1">Да</option>
+        </select>
+		<p><label for="birthday">Вакцинация от бешенства</label></p>
+		<input type="date" class="pure-input-2-3" placeholder="Дата" name="rabies">
+		<p><label for="birthday">Вакцинация от инфекций</label></p>
+		<input type="date" class="pure-input-2-3" placeholder="Дата" name="infection">		
+		<input type="hidden" name="ownerid" value="^ownerid^">
+    </fieldset>
+
+    <button type="submit" class="pure-button pure-input-2-3 pure-button-primary">Сохранить</button>
+</form>
+	
+	</div>
+	
+    <div class="pure-u-1-4">
+	^right^
+	<br>
+	<p><a class="button-success pure-button" href="/">Поиск владельца</a></p>
+	<p><a class="button-secondary pure-button" href="/report.php">Отчеты о вакцинации</a></p>
+	</div>
+</div>
+
+
+</body>
+</html>
